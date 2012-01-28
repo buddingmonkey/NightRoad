@@ -25,7 +25,7 @@ function Update () {
 
 	GetComponent.<WheelCollider>().motorTorque = newTorque;
 
-	Debug.Log("Wheel Torque: " + GetComponent.<WheelCollider>().motorTorque);
+	//Debug.Log("Wheel Torque: " + GetComponent.<WheelCollider>().motorTorque);
 
 	//
 	// Left
@@ -48,7 +48,7 @@ function Update () {
 	}
 
 	GetComponent.<WheelCollider>().steerAngle = newSteerAngle;
-	Debug.Log("Wheel Steer Angle: " + GetComponent.<WheelCollider>().steerAngle);
+	//Debug.Log("Wheel Steer Angle: " + GetComponent.<WheelCollider>().steerAngle);
 
 	// Finish straightening
 	if (newSteerAngle < 0.001f) {
