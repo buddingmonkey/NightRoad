@@ -24,7 +24,7 @@ public var maxLeftWheelAngle:float = maxRightWheelAngle * -1;
 public var wheelSmoothTime:float = 0.5f;
 private var currentSmoothTime:float;
 
-public var maxStallTime:float = 5.0f;
+public var maxStallTime:float = 1.0f;
 public var minStallDistance:float = 0.001f;
 private var lastPosition:Vector3;
 private var stallTime:float = 0.0f;
@@ -43,6 +43,8 @@ function Update () {
 
 			if (stallTime > maxStallTime) {
 				Debug.Log("Stalled.");
+
+				GameObject.FindGameObjectWithTag("car").SendMessage("respawn");
 			}
 		}
 		else {

@@ -8,44 +8,40 @@
 // Drag and Drop this script onto the car.
 //
 
-public var townRotations:Hashtable = {
-	"towna" : Quaternion(0.0f, 0.0f, 0.0f, 0.0f),
-	"townb" : Quaternion(0.0f, 180.0f, 0.0f, 0.0f)
-};
-
-private var fromTown:String;
-private var goalTown:String;
+private var origin:String;
+private var goal:String;
 
 function Start () {
-	respawn("towna", "townb");
+	origin = "towna";
+	goal = "townb";
+	respawn();
+}
+
+function respawn() {
+	respawnNext(origin, goal);
 }
 
 //
 // Spawn car at origin.
-// Set goal at dest.
 //
-function respawn(origin:String, dest:String) {
-	fromTown = origin;
-	goalTown = dest;
+function respawnNext(origin:String, goal:String) {
+	this.transform.position = GameObject.FindGameObjectWithTag(origin).transform.position;
+	this.transform.rotation = Quaternion(0.0f, 0.0f, 0.0f, 0.0f);
 
-	//
-	// Reset car position
-	//
-
-	this.transform.position = GameObject.FindGameObjectWithTag(fromTown).transform.position;
-
-	//
-	// Reset car orientation
-	//
-
-	this.transform.rotation = townRotations[fromTown];
+	Debug.Log("Drive to " + goal + "!");
 }
 
 function OnTriggerEnter(collision:Collider) {
-	if (collision.collider.tag.Equals(goalTown)) {
-		Debug.Log("Arrived at " + goalTown);
+	if (collision.collider.tag.Equals(goal)) {
+		Debug.Log("Arrived at " + goal);
 
-		respawn(goalTown, fromTown);
+		var newOrigin:String = goal;
+		var newGoal:String = origin;
+
+		origin = newOrigin;
+		goal = newGoal;
+
+		Debug.Log("Drive to " + goal + "!");
 	}
 }
 
@@ -53,6 +49,6 @@ function OnCollisionEnter(collision:Collision) {
 	if (collision.collider.tag.IndexOf("box") != -1) {
 		Debug.Log("Box Collision!");
 
-		respawn(fromTown, goalTown);
+		respawn();
 	}
 }
