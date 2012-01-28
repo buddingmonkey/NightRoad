@@ -1,9 +1,16 @@
 #pragma strict
 
-public var maxMotorTorque:float = 40.0f;
-public var maxLeftWheelAngle:float = -15.0f;
-public var maxRightWheelAngle:float = maxLeftWheelAngle * -1;
-public var maxBrakeTorque = 80.0f;
+// Forcible limit on car speed
+// public var maxRPM:float = 200.0f;
+
+public var maxMotorTorque:float = 20.0f;
+public var maxBrakeTorque = 40.0f;
+public var maxReverseTorque:float = maxMotorTorque * -1;
+
+private var movingBackward:boolean = false;
+
+public var maxRightWheelAngle:float = 10.0f;
+public var maxLeftWheelAngle:float = maxRightWheelAngle * -1;
 
 public var wheelSmoothTime:float = 0.5f;
 private var currentSmoothTime:float;
@@ -14,58 +21,65 @@ function Update () {
 	var collider:WheelCollider = GetComponent.<WheelCollider>();
 
 	//
-	// Forward
+	// Accelerating, Breaking, and Reversing
 	//
 
-	var newMotorTorque:float = 0;
+	var newMotorTorque:float = 0.0f;
+	var newBrakeTorque:float = 0.0f;
 
-	// Accelerate
+	// Push forward
 	if (Input.GetAxis("Vertical") > 0) {
-		newMotorTorque = maxMotorTorque;
+		// Break
+		if (movingBackward && collider.rpm > 1) {
+			newBrakeTorque = maxBrakeTorque;
+		}
+		// Accelerate
+		else {
+			movingBackward = false;
+
+			// Force speed limit
+			// if (collider.rpm < maxRPM) {
+				newMotorTorque = maxMotorTorque;
+			// }
+		}
+	}
+	// Pull backward
+	else if (Input.GetAxis("Vertical") < 0) {
+		// Break
+		if (collider.rpm > 1) {
+			newBrakeTorque = maxBrakeTorque;
+		}
+		// Reverse
+		else {
+			movingBackward = true;
+
+			// Force speed limit
+			// if (collider.rpm < maxRPM) {
+				newMotorTorque = maxReverseTorque;
+			// }
+		}
 	}
 
-	collider.motorTorque = newMotorTorque;
-
-	//Debug.Log("Wheel Torque: " + collider.motorTorque);
-
 	//
-	// Breaking
+	// Left and Right steering
 	//
 
-	var newBrakeTorque:float = 0;
-
-	// Break
-	if (Input.GetAxis("Vertical") < 0) {
-		newBrakeTorque = maxBrakeTorque;
-	}
-
-	collider.brakeTorque = newBrakeTorque;
-
-	//
-	// Left
-	//
-
-	var newSteerAngle:float;
+	var newSteerAngle:float = collider.steerAngle;
 
 	// Steer left
 	if (Input.GetAxis("Horizontal") < 0) {
-		newSteerAngle = Mathf.SmoothStep(maxLeftWheelAngle, 0, currentSmoothTime/wheelSmoothTime);
+		newSteerAngle = Mathf.SmoothStep(maxLeftWheelAngle, 0, Time.deltaTime/wheelSmoothTime);
 	}
 	// Steer right
 	else if (Input.GetAxis("Horizontal") > 0) {
-		newSteerAngle = Mathf.SmoothStep(maxRightWheelAngle, 0, currentSmoothTime/wheelSmoothTime);
-	}
-	// Straighten
-	else {
-		currentSmoothTime += Time.deltaTime;
-		newSteerAngle = Mathf.SmoothStep(0, maxLeftWheelAngle, currentSmoothTime/wheelSmoothTime);
+		newSteerAngle = Mathf.SmoothStep(maxRightWheelAngle, 0, Time.deltaTime/wheelSmoothTime);
 	}
 
+	//
+	// Enact
+	//
+
+	collider.motorTorque = newMotorTorque;
+	collider.brakeTorque = newBrakeTorque;
 	collider.steerAngle = newSteerAngle;
-	//Debug.Log("Wheel Steer Angle: " + collider.steerAngle);
-
-	// Finish straightening
-	if (newSteerAngle < 0.001f) {
-		currentSmoothTime = 0;
-	}
 }
