@@ -1,5 +1,11 @@
 # NightRoad - Driving into the dark heart of america
 
+## LICENSE
+
+Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported
+
+[http://creativecommons.org/licenses/by-nc-sa/3.0/](http://creativecommons.org/licenses/by-nc-sa/3.0/)
+
 ## REQUIREMENTS
 
  - Unity [http://unity3d.com/](http://unity3d.com/)

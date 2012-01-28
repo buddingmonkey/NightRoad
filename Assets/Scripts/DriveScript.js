@@ -1,5 +1,16 @@
 #pragma strict
 
+//
+// DriveScript
+//
+// Andrew Pennebaker
+//
+//
+// Maps WSAD to car controls.
+//
+// Drag and Drop this script onto the front two wheel colliders.
+//
+
 // Forcible limit on car speed
 // public var maxRPM:float = 200.0f;
 
