@@ -14,26 +14,30 @@
 
 Chris Grinnock
 
-<grinnock@gmail.com>
+Email: <grinnock@gmail.com>
 
 Rick Diaz
 
-<richard.diaz@gmail.com>
+Email: <richard.diaz@gmail.com>
 
 Amanda Ernst
 
-<hersheykiss01989@yahoo.com>
+Email: <hersheykiss01989@yahoo.com>
 
 ### Programmers
 
-[Andrew Eiche](andreweiche.com)
+Andrew Eiche
 
-<andy@andreweiche.com>
+Homepage: [http://andreweiche.com/](http://andreweiche.com/)
 
-[Andrew Pennebaker](http://www.yellosoft.us/)
+Email: <andy@andreweiche.com>
 
-<andrew.pennebaker@gmail.com>
+Andrew Pennebaker
+
+Homepage: [http://www.yellosoft.us/](http://www.yellosoft.us/)
+
+Email: <andrew.pennebaker@gmail.com>
 
 Rob Wramsay
 
-<robertwramsay@gmail.com>
+Email: <robertwramsay@gmail.com>
