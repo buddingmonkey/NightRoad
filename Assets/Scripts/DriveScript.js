@@ -7,6 +7,7 @@
 // - Detects stalling in the world.
 //
 // Drag and Drop this script onto the front two wheel colliders.
+// Car must have the tag "car".
 //
 
 // Forcible limit on car speed
