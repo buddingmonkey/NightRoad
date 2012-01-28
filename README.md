@@ -13,21 +13,21 @@
 ### Designers
 
  - Chris Grinnock
-   Email: <grinnock@gmail.com>
+   - Email: <grinnock@gmail.com>
  - Rick Diaz
-   Email: <richard.diaz@gmail.com>
+   - Email: <richard.diaz@gmail.com>
  - Amanda Ernst
-   Email: <hersheykiss01989@yahoo.com>
+   - Email: <hersheykiss01989@yahoo.com>
 
 ### Programmers
 
  - Andrew Eiche
-   Homepage: [http://andreweiche.com/](http://andreweiche.com/)
-   Email: <andy@andreweiche.com>
+   - Homepage: [http://andreweiche.com/](http://andreweiche.com/)
+   - Email: <andy@andreweiche.com>
 
  - Andrew Pennebaker
-   Homepage: [http://www.yellosoft.us/](http://www.yellosoft.us/)
-   Email: <andrew.pennebaker@gmail.com>
+   - Homepage: [http://www.yellosoft.us/](http://www.yellosoft.us/)
+   - Email: <andrew.pennebaker@gmail.com>
 
  - Rob Wramsay
-   Email: <robertwramsay@gmail.com>
+   - Email: <robertwramsay@gmail.com>
