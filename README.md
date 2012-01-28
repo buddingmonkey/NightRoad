@@ -6,7 +6,8 @@
 
 ## BUILDING
 
-`Control + B` (`Command + B` on Mac)
+ - Windows/Linux: `Control + B`
+ - Mac OS X: `Command + B`
 
 ## CREDITS
 
