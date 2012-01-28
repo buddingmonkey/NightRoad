@@ -42,3 +42,8 @@ Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported
 
  - Rob Wramsay
    - Email: <robertwramsay@gmail.com>
+
+### Audio Specialists
+
+ - Joshua Laughner
+   - Email: <joshualaughner@gmail.com>

@@ -29,8 +29,6 @@ public var minStallDistance:float = 0.001f;
 private var lastPosition:Vector3;
 private var stallTime:float = 0.0f;
 
-function Start () {}
-
 function Update () {
 	var collider:WheelCollider = GetComponent.<WheelCollider>();
 

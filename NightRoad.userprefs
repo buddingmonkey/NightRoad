@@ -2,7 +2,8 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/DestructScript.js">
     <Files>
-      <File FileName="Assets/Scripts/DestructScript.js" Line="17" Column="2" />
+      <File FileName="Assets/Scripts/DestructScript.js" Line="10" Column="1" />
+      <File FileName="Assets/Scripts/DriveScript.js" Line="10" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
