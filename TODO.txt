@@ -1,0 +1,4 @@
+ - Refine driving
+ - Add towns
+ - Use stall detection trigger to reset to last town
+ - Use destination detection trigger to assign new goal
