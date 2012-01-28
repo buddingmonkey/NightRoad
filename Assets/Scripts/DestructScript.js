@@ -16,7 +16,7 @@ private var goal:String;
 function Start () {
 	origin = "towna";
 	goal = "townb";
-	//respawn();
+	respawn();
 }
 
 function respawn() {
@@ -24,11 +24,11 @@ function respawn() {
 }
 
 //
-// Spawn truck at origin.
+// Spawn truck at origin, facing out towards goal.
 //
 function respawnNext(origin:String, goal:String) {
 	this.transform.position = GameObject.FindGameObjectWithTag(origin).transform.position;
-	//this.transform.rotation = Quaternion(0.0f, 0.0f, 0.0f, 0.0f);
+	this.transform.rotation = GameObject.FindGameObjectWithTag(origin).transform.rotation;
 
 	Debug.Log("Drive to " + goal + "!");
 }
