@@ -1,4 +1,4 @@
  - Refine driving
  - Move and fill in towns
- - Use stall detection and box detection to respawn
- - Use town detection to respawn with new goal
+ - Add safezone exit trigger
+ - Use safezone exit trigger to blow up, respawn
