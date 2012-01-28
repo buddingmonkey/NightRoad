@@ -30,6 +30,7 @@ public var minStallDistance:float = 10.0f;
 private var lastPosition:Vector3;
 private var stallTime:float = 0.0f;
 
+public var turningSpeed:float = 5.0f;
 function stall() {
 	Debug.Log("Stalled.");
 
@@ -109,13 +110,34 @@ function Update() {
 	var newSteerAngle:float = collider.steerAngle;
 
 	// Steer left
-	if (Input.GetAxis("Horizontal") < 0) {
-		newSteerAngle = Mathf.SmoothStep(maxLeftWheelAngle, 0, Time.deltaTime/wheelSmoothTime);
+	if (Input.GetAxis("Horizontal") < 0 && newSteerAngle > maxLeftWheelAngle) {
+		newSteerAngle -= turningSpeed * Time.deltaTime;
+		if (newSteerAngle < maxLeftWheelAngle){
+			newSteerAngle = maxLeftWheelAngle;
+		}
 	}
 	// Steer right
-	else if (Input.GetAxis("Horizontal") > 0) {
-		newSteerAngle = Mathf.SmoothStep(maxRightWheelAngle, 0, Time.deltaTime/wheelSmoothTime);
+	else if (Input.GetAxis("Horizontal") > 0 && newSteerAngle < maxRightWheelAngle) {
+		newSteerAngle += turningSpeed * Time.deltaTime;
+		if (newSteerAngle > maxRightWheelAngle){
+			newSteerAngle = maxRightWheelAngle;
+		}
 	}
+	// Straighten
+	else {
+		if (!Mathf.Approximately(newSteerAngle, 0)){
+			if (newSteerAngle > 0){
+				newSteerAngle -= turningSpeed * Time.deltaTime * 2;
+			}
+			else{
+				newSteerAngle += turningSpeed * Time.deltaTime * 2;
+			}
+		}
+		else{
+			newSteerAngle = 0;
+		}
+	}
+	//Debug.Log(newSteerAngle);
 
 	//
 	// Enact
