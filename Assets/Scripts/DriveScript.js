@@ -1,12 +1,10 @@
 #pragma strict
 
 //
-// DriveScript
+// DriveScript - Andrew Pennebaker
 //
-// Andrew Pennebaker
-//
-//
-// Maps WSAD to car controls.
+// - Maps WSAD to car controls.
+// - Detects stalling in the world.
 //
 // Drag and Drop this script onto the front two wheel colliders.
 //
@@ -26,10 +24,34 @@ public var maxLeftWheelAngle:float = maxRightWheelAngle * -1;
 public var wheelSmoothTime:float = 0.5f;
 private var currentSmoothTime:float;
 
+public var maxStallTime:float = 5.0f;
+public var minStallDistance:float = 0.001f;
+private var lastPosition:Vector3;
+private var stallTime:float = 0.0f;
+
 function Start () {}
 
 function Update () {
 	var collider:WheelCollider = GetComponent.<WheelCollider>();
+
+	//
+	// Trigger Stall
+	//
+	if (Input.GetAxis("Vertical") != 0 || Input.GetAxis("Horizontal") != 0) {
+		var currentPosition = collider.transform.position;
+
+		if ((currentPosition - lastPosition).magnitude < minStallDistance) {
+			stallTime += Time.deltaTime;
+
+			if (stallTime > maxStallTime) {
+				Debug.Log("Stalled.");
+			}
+		}
+		else {
+			lastPosition = currentPosition;
+			stallTime = 0.0f;
+		}
+	}
 
 	//
 	// Accelerating, Breaking, and Reversing
