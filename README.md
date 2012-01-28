@@ -2,7 +2,7 @@
 
 ## REQUIREMENTS
 
- - [Unity](http://unity3d.com/)
+ - Unity [http://unity3d.com/](http://unity3d.com/)
 
 ## BUILDING
 
