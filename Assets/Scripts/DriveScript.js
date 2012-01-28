@@ -25,16 +25,26 @@ public var maxLeftWheelAngle:float = maxRightWheelAngle * -1;
 public var wheelSmoothTime:float = 0.5f;
 private var currentSmoothTime:float;
 
-public var maxStallTime:float = 1.0f;
-public var minStallDistance:float = 0.001f;
+public var maxStallTime:float = 0.025f;
+public var minStallDistance:float = 10.0f;
 private var lastPosition:Vector3;
 private var stallTime:float = 0.0f;
 
-function Update () {
+function stall() {
+	Debug.Log("Stalled.");
+
+	GameObject.FindGameObjectWithTag("car").SendMessage("respawn");
+}
+
+function Update() {
 	var collider:WheelCollider = GetComponent.<WheelCollider>();
 
 	//
 	// Trigger Stall
+	//
+	// /!\ Slow/Unresponsive. Requires the player to attempt /!\
+	//     to move the car while the car fails to move.
+	// /!\                                                   /!\
 	//
 	if (Input.GetAxis("Vertical") != 0 || Input.GetAxis("Horizontal") != 0) {
 		var currentPosition = collider.transform.position;
@@ -43,9 +53,7 @@ function Update () {
 			stallTime += Time.deltaTime;
 
 			if (stallTime > maxStallTime) {
-				Debug.Log("Stalled.");
-
-				GameObject.FindGameObjectWithTag("car").SendMessage("respawn");
+				stall();
 			}
 		}
 		else {
