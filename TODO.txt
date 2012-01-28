@@ -1,4 +1,3 @@
  - Refine driving
  - Move and fill in towns
- - Add safezone exit trigger
  - Use safezone exit trigger to blow up, respawn
