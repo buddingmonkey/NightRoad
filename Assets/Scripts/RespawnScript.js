@@ -13,7 +13,7 @@
 private var origin:String;
 private var goal:String;
 
-function Start () {
+function Start() {
 	origin = "towna";
 	goal = "townb";
 	respawn();

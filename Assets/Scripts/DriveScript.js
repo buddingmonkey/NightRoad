@@ -25,20 +25,24 @@ public var maxLeftWheelAngle:float = maxRightWheelAngle * -1;
 public var wheelSmoothTime:float = 0.5f;
 private var currentSmoothTime:float;
 
+public var turningSpeed:float = 5.0f;
+
+/*
 public var maxStallTime:float = 0.025f;
 public var minStallDistance:float = 10.0f;
 private var lastPosition:Vector3;
-private var stallTime:float = 0.0f;
+private var stallTime:float = 0.0f;*/
 
-public var turningSpeed:float = 5.0f;
-function stall() {
+/*function stall() {
 	Debug.Log("Stalled.");
 
 	GameObject.FindGameObjectWithTag("Truck").SendMessage("respawn");
-}
+}*/
 
 function Update() {
 	var collider:WheelCollider = GetComponent.<WheelCollider>();
+
+/*
 
 	//
 	// Trigger Stall
@@ -62,6 +66,8 @@ function Update() {
 			stallTime = 0.0f;
 		}
 	}
+
+*/
 
 	//
 	// Accelerating, Breaking, and Reversing
