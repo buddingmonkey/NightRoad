@@ -6,8 +6,8 @@
 // - Reacts to physical and logical collision.
 // - Reacts to leaving the safezone.
 //
-// Drag and Drop this script onto the car.
-// Car should be tagged "car".
+// Drag and Drop this script onto the truck.
+// Truck should be tagged "truck".
 //
 
 private var origin:String;
@@ -16,7 +16,7 @@ private var goal:String;
 function Start () {
 	origin = "towna";
 	goal = "townb";
-	respawn();
+	//respawn();
 }
 
 function respawn() {
@@ -24,13 +24,13 @@ function respawn() {
 }
 
 //
-// Spawn car at origin.
+// Spawn truck at origin.
 //
 function respawnNext(origin:String, goal:String) {
 	this.transform.position = GameObject.FindGameObjectWithTag(origin).transform.position;
-	this.transform.rotation = Quaternion(0.0f, 0.0f, 0.0f, 0.0f);
+	//this.transform.rotation = Quaternion(0.0f, 0.0f, 0.0f, 0.0f);
 
-	//Debug.Log("Drive to " + goal + "!");
+	Debug.Log("Drive to " + goal + "!");
 }
 
 function OnTriggerEnter(collision:Collider) {
@@ -43,12 +43,12 @@ function OnTriggerEnter(collision:Collider) {
 		origin = newOrigin;
 		goal = newGoal;
 
-		//Debug.Log("Drive to " + goal + "!");
+		Debug.Log("Drive to " + goal + "!");
 	}
 }
 
 function OnCollisionEnter(collision:Collision) {
-	if (collision.collider.tag.IndexOf("box") != -1) {
+	if (collision.collider.tag.IndexOf("Hazard Collider") != -1) {
 		Debug.Log("Box Collision!");
 
 		respawn();

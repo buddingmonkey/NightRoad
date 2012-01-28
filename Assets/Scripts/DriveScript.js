@@ -3,14 +3,14 @@
 //
 // DriveScript - Andrew Pennebaker
 //
-// - Maps WSAD to car controls.
+// - Maps WSAD to truck controls.
 // - Detects stalling in the world.
 //
 // Drag and Drop this script onto the front two wheel colliders.
-// Car must have the tag "car".
+// Truck must have the tag "Truck".
 //
 
-// Forcible limit on car speed
+// Forcible limit on truck speed
 // public var maxRPM:float = 200.0f;
 
 public var maxMotorTorque:float = 20.0f;
@@ -33,7 +33,7 @@ private var stallTime:float = 0.0f;
 function stall() {
 	Debug.Log("Stalled.");
 
-	GameObject.FindGameObjectWithTag("car").SendMessage("respawn");
+	GameObject.FindGameObjectWithTag("Truck").SendMessage("respawn");
 }
 
 function Update() {
@@ -43,7 +43,7 @@ function Update() {
 	// Trigger Stall
 	//
 	// /!\ Slow/Unresponsive. Requires the player to attempt /!\
-	//     to move the car while the car fails to move.
+	//     to move the truck while the truck fails to move.
 	// /!\                                                   /!\
 	//
 	if (Input.GetAxis("Vertical") != 0 || Input.GetAxis("Horizontal") != 0) {
