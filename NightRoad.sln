@@ -11,6 +11,8 @@ Project("{EE0E724E-FDC9-E01C-29D9-5CB88F9E35CF}") = "NightRoad", "Assembly-CShar
 EndProject
 Project("{EE0E724E-FDC9-E01C-29D9-5CB88F9E35CF}") = "NightRoad", "Assembly-UnityScript-firstpass.unityproj", "{DF4C75B2-1F83-5C9A-ED40-776EFEBAF328}"
 EndProject
+Project("{EE0E724E-FDC9-E01C-29D9-5CB88F9E35CF}") = "NightRoad", "Assembly-UnityScript.unityproj", "{BDAC0D25-7139-1436-90C2-36A699045D5B}"
+EndProject
 Project("{EE0E724E-FDC9-E01C-29D9-5CB88F9E35CF}") = "NightRoad", "Assembly-UnityScript-Editor-firstpass.unityproj", "{C9C57D93-A753-477D-5E3B-0AF988DBF029}"
 EndProject
 Global
@@ -39,6 +41,10 @@ Global
 		{DF4C75B2-1F83-5C9A-ED40-776EFEBAF328}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DF4C75B2-1F83-5C9A-ED40-776EFEBAF328}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DF4C75B2-1F83-5C9A-ED40-776EFEBAF328}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BDAC0D25-7139-1436-90C2-36A699045D5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDAC0D25-7139-1436-90C2-36A699045D5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDAC0D25-7139-1436-90C2-36A699045D5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDAC0D25-7139-1436-90C2-36A699045D5B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C9C57D93-A753-477D-5E3B-0AF988DBF029}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C9C57D93-A753-477D-5E3B-0AF988DBF029}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C9C57D93-A753-477D-5E3B-0AF988DBF029}.Release|Any CPU.ActiveCfg = Release|Any CPU
