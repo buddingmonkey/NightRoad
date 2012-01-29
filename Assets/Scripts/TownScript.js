@@ -1,7 +1,7 @@
 #pragma strict
 
 //
-// RespawnScript - Andrew Pennebaker
+// TownScript - Andrew Pennebaker
 //
 // Reacts to hazard collision and safe zone exit by respawning.
 //
@@ -40,6 +40,8 @@ function respawnNext(origin:String, goal:String) {
 	this.transform.position = GameObject.FindGameObjectWithTag(origin).transform.position;
 	this.transform.rotation = GameObject.FindGameObjectWithTag(origin).transform.rotation;
 
+	GameObject.FindGameObjectWithTag("Truck").SendMessage("fillUp");
+
 	Debug.Log("Drive to " + goal + "!");
 }
 
@@ -52,6 +54,8 @@ function OnTriggerEnter(collision:Collider) {
 
 		origin = newOrigin;
 		goal = newGoal;
+
+		GameObject.FindGameObjectWithTag("Truck").SendMessage("fillUp");
 
 		Debug.Log("Drive to " + goal + "!");
 	}
