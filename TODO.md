@@ -1,2 +1,4 @@
  - SFX
  - Env. destruction
+ - Fuel
+   - Game loss
