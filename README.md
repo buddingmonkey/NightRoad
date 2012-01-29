@@ -21,16 +21,23 @@ Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported
 
 ## CREDITS
 
-### Designers
+### Design
 
  - Chris Grinnock
    - Email: <grinnock@gmail.com>
+
+### Graphics
+
  - Rick Diaz
    - Email: <richard.diaz@gmail.com>
  - Amanda Ernst
    - Email: <hersheykiss01989@yahoo.com>
+ - Sasha Rosser
+   - Email: <srosser@brains.gmu.edu>
+ - Samuel Williams
+   - Email: <dudewiththetude@gmail.com>
 
-### Programmers
+### Programming
 
  - Andrew Eiche
    - Homepage: [http://andreweiche.com/](http://andreweiche.com/)
@@ -43,7 +50,7 @@ Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported
  - Rob Wramsay
    - Email: <robertwramsay@gmail.com>
 
-### Audio Specialists
+### Sound Effects
 
  - Joshua Laughner
    - Email: <joshualaughner@gmail.com>
