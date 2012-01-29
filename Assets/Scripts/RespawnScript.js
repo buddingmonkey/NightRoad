@@ -1,13 +1,17 @@
 #pragma strict
 
 //
-// DestructScript - Andrew Pennebaker
+// RespawnScript - Andrew Pennebaker
 //
-// - Reacts to physical and logical collision.
-// - Reacts to leaving the safezone.
+// Reacts to hazard collision and safe zone exit by respawning.
 //
 // Drag and Drop this script onto the truck.
-// Truck should be tagged "truck".
+// Truck should be tagged "Truck".
+//
+// Town sphere A should be tagged "towna".
+// Town sphere B should be tagged "townb".
+//
+// Respawns occur in the center of the last town, rotated facing out of the town sphere.
 //
 
 private var origin:String;
@@ -17,6 +21,12 @@ function Start() {
 	origin = "towna";
 	goal = "townb";
 	respawn();
+}
+
+function Update() {
+	if (Input.GetAxis("Jump")) {
+		respawn();
+	}
 }
 
 function respawn() {
