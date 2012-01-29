@@ -1,7 +1,0 @@
- - SFX
- - Env. destruction
-   - Trails
-   - Blasts
- - Box 'splode animation
- - Menu
- - Website http://globalgamejam.org/2012/night-road
