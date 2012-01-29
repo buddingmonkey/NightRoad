@@ -1,5 +1,6 @@
 fileFormatVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
 guid: ea2e22aeb73b740d396460fb8d3a9482
 ModelImporter:
   fileIDToRecycleName:
@@ -46,6 +47,15 @@ ModelImporter:
   fileIDToRecycleName:
     4300000: pickup
 >>>>>>> c0542da5ce102d741ebe1aa12dcbffb30e9185c5
+=======
+guid: 9d6b297cdbda14bdd8e2e3d93f9b0b76
+ModelImporter:
+  fileIDToRecycleName:
+    4300000: pickup
+    4300002: front_wheel_l
+    4300004: front_wheel_r
+    4300006: rear_wheels
+>>>>>>> fd671f8c39386a4e8dc743fa49069ec1057211f5
   serializedVersion: 10
   materials:
     importMaterials: 1
@@ -83,6 +93,7 @@ ModelImporter:
     //RootNode:
       data:
         first: 1
+<<<<<<< HEAD
 <<<<<<< HEAD
         second: b4860100
       data:
@@ -159,11 +170,14 @@ ModelImporter:
     Box030:
       data:
         first: 1
+=======
+>>>>>>> fd671f8c39386a4e8dc743fa49069ec1057211f5
         second: a8860100
       data:
         first: 4
         second: 881a0600
       data:
+<<<<<<< HEAD
         first: 23
         second: 68182300
       data:
@@ -196,6 +210,11 @@ ModelImporter:
         first: 33
         second: a45a3200
     Box033:
+=======
+        first: 111
+        second: 605fa900
+    front_wheel_l:
+>>>>>>> fd671f8c39386a4e8dc743fa49069ec1057211f5
       data:
         first: 1
         second: a2860100
@@ -208,11 +227,17 @@ ModelImporter:
       data:
         first: 33
         second: a25a3200
+<<<<<<< HEAD
     Box034:
       data:
         first: 1
 =======
 >>>>>>> c0542da5ce102d741ebe1aa12dcbffb30e9185c5
+=======
+    front_wheel_r:
+      data:
+        first: 1
+>>>>>>> fd671f8c39386a4e8dc743fa49069ec1057211f5
         second: a0860100
       data:
         first: 4
@@ -223,6 +248,7 @@ ModelImporter:
       data:
         first: 33
         second: a05a3200
+<<<<<<< HEAD
 <<<<<<< HEAD
     Box035:
       data:
@@ -580,3 +606,31 @@ ModelImporter:
         first: 111
         second: 605fa900
 >>>>>>> c0542da5ce102d741ebe1aa12dcbffb30e9185c5
+=======
+    pickup:
+      data:
+        first: 1
+        second: a4860100
+      data:
+        first: 4
+        second: 841a0600
+      data:
+        first: 23
+        second: 64182300
+      data:
+        first: 33
+        second: a45a3200
+    rear_wheels:
+      data:
+        first: 1
+        second: a6860100
+      data:
+        first: 4
+        second: 861a0600
+      data:
+        first: 23
+        second: 66182300
+      data:
+        first: 33
+        second: a65a3200
+>>>>>>> fd671f8c39386a4e8dc743fa49069ec1057211f5

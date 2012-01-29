@@ -21,11 +21,7 @@ function Start() {
 	origin = "towna";
 	goal = "townb";
 
-<<<<<<< HEAD
-	respawn();
-=======
 	//respawn();
->>>>>>> c0542da5ce102d741ebe1aa12dcbffb30e9185c5
 }
 
 function Update() {
