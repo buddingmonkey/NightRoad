@@ -1,5 +1,13 @@
 #pragma strict
 
+//
+// FuelScript - Andrew Pennebaker
+//
+// Manage and penalize late delivery with fuel loss.
+//
+// Apply this script to the Truck.
+//
+
 public var maxFuel:float = 200.0f;
 public var minFuel:float = 0.0f;
 public var fuelLoss:float = 1.0f;
