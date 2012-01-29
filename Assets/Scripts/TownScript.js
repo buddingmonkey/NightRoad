@@ -20,6 +20,7 @@ private var goal:String;
 function Start() {
 	origin = "towna";
 	goal = "townb";
+
 	respawn();
 }
 
