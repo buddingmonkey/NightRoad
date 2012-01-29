@@ -70,7 +70,10 @@ public class TerrainDeformer : MonoBehaviour
     public void DestroyTerrain(Vector3 pos, float craterSizeInMeters)
     {
         DeformTerrain(pos,craterSizeInMeters);
+<<<<<<< HEAD
 		Debug.Log("Inside");
+=======
+>>>>>>> c0542da5ce102d741ebe1aa12dcbffb30e9185c5
         TextureDeformation(pos, craterSizeInMeters*1.5f);
     }
     
@@ -84,6 +87,7 @@ public class TerrainDeformer : MonoBehaviour
 		int heightMapCraterLength = (int)(craterSizeInMeters);
 		int heightMapStartPosX = (int)(terrainPos.x - (heightMapCraterWidth / 2));
         int heightMapStartPosZ = (int)(terrainPos.z - (heightMapCraterLength / 2));
+<<<<<<< HEAD
 		Debug.Log("heightMapCraterWidth=" + heightMapCraterWidth);
 		Debug.Log("heightMapCraterLength=" + heightMapCraterLength);
 		Debug.Log("heightMapStartPosX=" + heightMapStartPosX);
@@ -91,6 +95,10 @@ public class TerrainDeformer : MonoBehaviour
 
         float[,] heights = terr.terrainData.GetHeights(heightMapStartPosX, heightMapStartPosZ, heightMapCraterWidth, heightMapCraterLength);
 		Debug.Log("Heights array: " + heights);
+=======
+
+        float[,] heights = terr.terrainData.GetHeights(heightMapStartPosX, heightMapStartPosZ, heightMapCraterWidth, heightMapCraterLength);
+>>>>>>> c0542da5ce102d741ebe1aa12dcbffb30e9185c5
 		float circlePosX;
         float circlePosY;
         float distanceFromCenter;
@@ -107,7 +115,10 @@ public class TerrainDeformer : MonoBehaviour
                 circlePosY = (i - (heightMapCraterLength / 2)) / (hmHeight / terr.terrainData.size.z);
                 distanceFromCenter = Mathf.Abs(Mathf.Sqrt(circlePosX * circlePosX + circlePosY * circlePosY));
                 //convert back to values without skew
+<<<<<<< HEAD
                 Debug.Log("Heights 0: " + heights[i,j]);
+=======
+>>>>>>> c0542da5ce102d741ebe1aa12dcbffb30e9185c5
                 if (distanceFromCenter < (craterSizeInMeters / 2.0f))
                 {
                     depthMultiplier = ((craterSizeInMeters / 2.0f - distanceFromCenter) / (craterSizeInMeters / 2.0f));
@@ -116,15 +127,22 @@ public class TerrainDeformer : MonoBehaviour
                     depthMultiplier += Random.value * .1f;
 
                     depthMultiplier = Mathf.Clamp(depthMultiplier, 0, 1);
+<<<<<<< HEAD
 					Debug.Log("Heights 1: " + heights[i,j]);
                     heights[i, j] = Mathf.Clamp(heights[i, j] - deformationDepth * depthMultiplier, 0, 1);
 					Debug.Log("Heights 2: " + heights[i,j]);
+=======
+                    heights[i, j] = Mathf.Clamp(heights[i, j] - deformationDepth * depthMultiplier, 0, 1);
+>>>>>>> c0542da5ce102d741ebe1aa12dcbffb30e9185c5
                 }
             }
         }
 		
+<<<<<<< HEAD
 		Debug.Log("End of Terrain");
 		Debug.Log("heights length: " + heights.Length);
+=======
+>>>>>>> c0542da5ce102d741ebe1aa12dcbffb30e9185c5
         // set the new height
        terr.terrainData.SetHeights(heightMapStartPosX, heightMapStartPosZ, heights);
     }
@@ -159,7 +177,10 @@ public class TerrainDeformer : MonoBehaviour
                 {
                     for (int layerCount = 0; layerCount < numOfAlphaLayers; layerCount++)
                     {
+<<<<<<< HEAD
 						Debug.Log("Alpha Layers: " + layerCount);
+=======
+>>>>>>> c0542da5ce102d741ebe1aa12dcbffb30e9185c5
                         //could add blending here in the future
                         if (layerCount == terrainDeformationTextureNum)
                         {
@@ -174,7 +195,10 @@ public class TerrainDeformer : MonoBehaviour
             }
         } 
 		
+<<<<<<< HEAD
 		Debug.Log("End of Texture");
+=======
+>>>>>>> c0542da5ce102d741ebe1aa12dcbffb30e9185c5
        terr.terrainData.SetAlphamaps(alphaMapStartPosX, alphaMapStartPosZ, alphas);
     }
 

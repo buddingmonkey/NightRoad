@@ -1,8 +1,18 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 212c8440d6ec74575859262a66201a87
 ModelImporter:
   fileIDToRecycleName:
     4300000: pickup
+=======
+guid: 9d6b297cdbda14bdd8e2e3d93f9b0b76
+ModelImporter:
+  fileIDToRecycleName:
+    4300000: pickup
+    4300002: front_wheel_l
+    4300004: front_wheel_r
+    4300006: rear_wheels
+>>>>>>> c0542da5ce102d741ebe1aa12dcbffb30e9185c5
   serializedVersion: 10
   materials:
     importMaterials: 1
@@ -40,6 +50,32 @@ ModelImporter:
     //RootNode:
       data:
         first: 1
+<<<<<<< HEAD
+=======
+        second: a8860100
+      data:
+        first: 4
+        second: 881a0600
+      data:
+        first: 111
+        second: 605fa900
+    front_wheel_l:
+      data:
+        first: 1
+        second: a2860100
+      data:
+        first: 4
+        second: 821a0600
+      data:
+        first: 23
+        second: 62182300
+      data:
+        first: 33
+        second: a25a3200
+    front_wheel_r:
+      data:
+        first: 1
+>>>>>>> c0542da5ce102d741ebe1aa12dcbffb30e9185c5
         second: a0860100
       data:
         first: 4
@@ -50,6 +86,35 @@ ModelImporter:
       data:
         first: 33
         second: a05a3200
+<<<<<<< HEAD
       data:
         first: 111
         second: 605fa900
+=======
+    pickup:
+      data:
+        first: 1
+        second: a4860100
+      data:
+        first: 4
+        second: 841a0600
+      data:
+        first: 23
+        second: 64182300
+      data:
+        first: 33
+        second: a45a3200
+    rear_wheels:
+      data:
+        first: 1
+        second: a6860100
+      data:
+        first: 4
+        second: 861a0600
+      data:
+        first: 23
+        second: 66182300
+      data:
+        first: 33
+        second: a65a3200
+>>>>>>> c0542da5ce102d741ebe1aa12dcbffb30e9185c5

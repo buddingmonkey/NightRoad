@@ -1,4 +1,5 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: ea2e22aeb73b740d396460fb8d3a9482
 ModelImporter:
   fileIDToRecycleName:
@@ -39,6 +40,12 @@ ModelImporter:
     4300068: Cylinder010
     4300070: Cylinder011
     4300072: Box066
+=======
+guid: 212c8440d6ec74575859262a66201a87
+ModelImporter:
+  fileIDToRecycleName:
+    4300000: pickup
+>>>>>>> c0542da5ce102d741ebe1aa12dcbffb30e9185c5
   serializedVersion: 10
   materials:
     importMaterials: 1
@@ -76,6 +83,7 @@ ModelImporter:
     //RootNode:
       data:
         first: 1
+<<<<<<< HEAD
         second: b4860100
       data:
         first: 4
@@ -203,6 +211,8 @@ ModelImporter:
     Box034:
       data:
         first: 1
+=======
+>>>>>>> c0542da5ce102d741ebe1aa12dcbffb30e9185c5
         second: a0860100
       data:
         first: 4
@@ -213,6 +223,7 @@ ModelImporter:
       data:
         first: 33
         second: a05a3200
+<<<<<<< HEAD
     Box035:
       data:
         first: 1
@@ -564,3 +575,8 @@ ModelImporter:
       data:
         first: 33
         second: b65a3200
+=======
+      data:
+        first: 111
+        second: 605fa900
+>>>>>>> c0542da5ce102d741ebe1aa12dcbffb30e9185c5

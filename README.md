@@ -1,5 +1,6 @@
 # NightRoad - Driving into the dark heart of america
 
+<<<<<<< HEAD
 ## HOMEPAGE
 
 [http://globalgamejam.org/2012/night-road](http://globalgamejam.org/2012/night-road)
@@ -54,3 +55,10 @@ Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported
 
  - Joshua Laughner
    - Email: <joshualaughner@gmail.com>
+=======
+## CREDITS
+
+[Andrew Pennebaker](http://www.yellosoft.us/) <andrew.pennebaker@gmail.com>
+
+[Unity](http://unity3d.com/)
+>>>>>>> c0542da5ce102d741ebe1aa12dcbffb30e9185c5
