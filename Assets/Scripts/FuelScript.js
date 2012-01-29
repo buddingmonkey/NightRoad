@@ -14,8 +14,8 @@ function Start() {
 function Update() {
 	var deltaFuel = Time.deltaTime * fuelLoss * (Mathf.Abs(Input.GetAxis("Vertical") + idleFuelLossPercent));
 	myFuel -= deltaFuel;
-	
-	Debug.Log("Fuel: " + myFuel);
+
+	//Debug.Log("Fuel: " + myFuel);
 
 	if (myFuel < minFuel) {
 		Debug.Log("Out of fuel. GAME OVER");
