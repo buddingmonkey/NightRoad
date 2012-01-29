@@ -23,3 +23,7 @@ function Update() {
 function fillUp() {
 	myFuel = maxFuel;
 }
+
+function penalize() {
+	myFuel = maxFuel * 0.75f;
+}

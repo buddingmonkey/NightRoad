@@ -27,6 +27,7 @@ function Start() {
 function Update() {
 	if (Input.GetAxis("Jump")) {
 		respawn();
+		GameObject.FindGameObjectWithTag("Truck").SendMessage("penalize");
 	}
 }
 
